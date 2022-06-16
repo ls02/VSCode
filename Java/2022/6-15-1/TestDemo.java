@@ -1,10 +1,10 @@
-import java.rmi.server.ObjID;
+import java.util.ArrayList;
 
 /*
  * @Author: ls02 <2877455773@qq.com>
  * @Date: 2022-06-15 20:53:54
  * @LastEditors: ls02 <2877455773@qq.com>
- * @LastEditTime: 2022-06-15 23:34:41
+ * @LastEditTime: 2022-06-16 09:55:18
  * @FilePath: \Java\2022\6-15-1\TestDemo.java
  * @Description: 
  * 
@@ -31,7 +31,7 @@ import java.rmi.server.ObjID;
  *                                       //.-~~~--\
  *                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 
- *                               ���ޱ���            ����BUG
+ *                               锟斤拷锟睫憋拷锟斤拷            锟斤拷锟斤拷BUG
  */
 
 class Queue {
@@ -88,16 +88,16 @@ public class TestDemo {
     }
     public static void main(String[] args) throws InterruptedException {
         Queue q = new Queue();
-        //生产�?
+        //鐢熶骇鑰?
         Thread thread1 = new Thread() {
             @Override
             public void run() {
                 for (int i = 1; i < 1000; i++) {
-                    System.out.println("������:" + i);
+                    System.out.println("生产者:" + i);
 
                     try {
                         q.put(i);
-                        Thread.sleep(1000);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -107,14 +107,14 @@ public class TestDemo {
 
         thread1.start();
 
-        //消费�?
+        //娑堣垂鑰?
         Thread thread2 = new Thread() {
             @Override
             public void run() {
                 while (true) {
                     try {
                         int ret = q.pop();
-                        System.out.println("�����ߣ�" + ret);
+                        System.out.println("消费者A：" + ret);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -124,7 +124,59 @@ public class TestDemo {
 
         thread2.start();
 
+        Thread thread3 = new Thread() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        int ret = q.pop();
+                        System.out.println("消费者B：" + ret);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+
+        thread3.start();
+
+        Thread thread4 = new Thread() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        int ret = q.pop();
+                        System.out.println("消费者C：" + ret);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+
+        thread4.start();
+
+        Thread thread5 = new Thread() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        int ret = q.pop();
+                        System.out.println("消费者D：" + ret);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+
+        
+        thread5.start();
+
         thread1.join();
         thread2.join();
+        thread3.join();
+        thread4.join();
+        thread5.join();
     }
 }
