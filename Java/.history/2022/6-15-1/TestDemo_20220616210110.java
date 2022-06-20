@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * @Author: ls02 <2877455773@qq.com>
  * @Date: 2022-06-15 20:53:54
  * @LastEditors: ls02 <2877455773@qq.com>
- * @LastEditTime: 2022-06-16 21:17:28
+ * @LastEditTime: 2022-06-16 15:08:24
  * @FilePath: \Java\2022\6-15-1\TestDemo.java
  * @Description: 
  * 
@@ -93,12 +93,12 @@ public class TestDemo {
         Thread thread1 = new Thread() {
             @Override
             public void run() {
-                for (int i = 1; i < 10; i++) {
+                for (int i = 1; i < 1000; i++) {
                     System.out.println("生产者:" + i);
 
                     try {
                         q.put(i);
-                        Thread.sleep(1);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) { 
                     }
                 }

@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-
 /*
  * @Author: ls02 <2877455773@qq.com>
  * @Date: 2022-06-15 20:53:54
  * @LastEditors: ls02 <2877455773@qq.com>
- * @LastEditTime: 2022-06-16 21:17:28
+ * @LastEditTime: 2022-06-16 09:35:23
  * @FilePath: \Java\2022\6-15-1\TestDemo.java
  * @Description: 
  * 
@@ -31,7 +29,7 @@ import java.util.ArrayList;
  *                                       //.-~~~--\
  *                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 
- *                               神兽保佑            永无BUG
+ *                               锟斤拷锟睫憋拷锟斤拷            锟斤拷锟斤拷BUG
  */
 
 class Queue {
@@ -86,20 +84,20 @@ public class TestDemo {
             obj.wait();
         }
     }
-    
     public static void main(String[] args) throws InterruptedException {
         Queue q = new Queue();
         //鐢熶骇鑰?
         Thread thread1 = new Thread() {
             @Override
             public void run() {
-                for (int i = 1; i < 10; i++) {
+                for (int i = 1; i < 1000; i++) {
                     System.out.println("生产者:" + i);
 
                     try {
                         q.put(i);
-                        Thread.sleep(1);
-                    } catch (InterruptedException e) { 
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
                 }
             }
@@ -140,43 +138,10 @@ public class TestDemo {
 
         thread3.start();
 
-        Thread thread4 = new Thread() {
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        int ret = q.pop();
-                        System.out.println("消费者C：" + ret);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        };
-
-        thread4.start();
-
-        Thread thread5 = new Thread() {
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        int ret = q.pop();
-                        System.out.println("消费者D：" + ret);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        };
-
-        
-        thread5.start();
+Scanner
 
         thread1.join();
         thread2.join();
         thread3.join();
-        thread4.join();
-        thread5.join();
     }
 }
