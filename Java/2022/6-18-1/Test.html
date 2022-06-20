@@ -2,7 +2,7 @@
  * @Author: ls02 <2877455773@qq.com>
  * @Date: 2022-06-18 17:19:58
  * @LastEditors: ls02 <2877455773@qq.com>
- * @LastEditTime: 2022-06-18 23:15:38
+ * @LastEditTime: 2022-06-20 16:15:22
  * @FilePath: \Java\2022\6-18-1\Test.html
  * @Description: 
  * 
@@ -15,6 +15,11 @@
         <!--mate 指定字符集编码-->
         <mate charset="UTF-8">
         <title>我的标题</title>
+        <style>
+            td {
+                text-align: center;
+            }
+        </style>
     </head>
     <!--body放要展示的内容-->
     <body>
@@ -29,12 +34,74 @@
         <s>删除线效果</s>
         <ins>下划线效果</ins>
         <u>下划线效果</u> -->
-        <img src="image/1.jpg"
+        <!-- 图片相关的操作 -->
+        <!-- <img src="image/1.jpg"
         alt="图片加载失败" 
         title="美女图片"
-        width="900" height="900" />
-        <a href="https://www.baidu.com/">这是一个百度的超链接</a>
+        width="900" height="900" /> -->
+        <!-- 超链接相关的操作 -->
+        <!-- target="_blank" 这个属性是用来表示当前超链接不替换，没加默认就是替换 -->
+        <!-- <a href="https://www.baidu.com/" target="_blank">这是一个百度的超链接</a> -->
+        <!-- 也可以写成相对路径 -->
+        <!-- <a href="image/1.jpg" target="_blank">这是一个相对路径</a> -->
 
+        <!-- 表格标签 -->
+        <!-- table表示表格，tr表示一行，td表示一行中的一个单元格，
+            thead表示表格的头部，tbody表示表格的主题区域
+            border表示边框的意思，cellspacing是表示间隙，align表示表格对齐方式-->
+        <!-- <table width="300px" height="300px" border="1px" cellspacing="0" align="center">
+            <tr>
+                <td><b>姓名</b></td>
+                <td><b>性别</b></td>
+                <td><b>年龄</b></td>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>女</td>
+                <td>33</td>
+            </tr>
+        </table> -->
 
+        <!-- 有序列表 -->
+        <!-- <ol>
+            <li>吃饭</li>
+            <li>睡觉</li>
+        </ol> -->
+        <!-- 无序列表 -->
+        <!-- <ul>
+            <li>吃饭</li>
+            <li>睡觉</li>
+        </ul> -->
+        <!-- 自定义列表 -->
+        <!-- <dl>
+            <dt>我要干啥</dt>
+            <dd>吃饭</dd>
+            <dd>睡觉</dd>
+        </dl> -->
+        <!-- 表单标签，表单标签相当于让用户填表的效果 -->
+        <!-- action表示用户的数据提交给谁（服务器）？url(服务器地址)
+        input表示输入控件，type是一个单行文本框用于输入，双引号里面是选中类型，如果是密码就会隐藏
+        radio单选框，用于选择的点击会有标识，如果需要单选那么需要关联,如果需要一开始默认就可以添加个checked属性
+        复选框checked -->
+        <form action="https://www.baidu.com">
+            <!-- <input type="password"> -->
+            <!-- <input type="radio" name="gender" checked="checked">男
+            <br>
+            <input type="radio" name="gender">女 -->
+            <input type="checkbox">吃饭
+            <br>
+            <input type="checkbox">睡觉
+            <!-- button一个按钮，value按钮名，onclick弹窗 -->
+            <input type="button" value="确认" onclick="alert('hello')">
+            <!-- 提交按钮 -->
+            <input type="text" name="key">
+            <input type="submit" value="提交">
+            <input type="text">
+        </form>
     </body>
     </html>
