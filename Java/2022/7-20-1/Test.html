@@ -2,7 +2,7 @@
  * @Author: ls02 <2877455773@qq.com>
  * @Date: 2022-07-20 22:01:20
  * @LastEditors: ls02 <2877455773@qq.com>
- * @LastEditTime: 2022-07-20 22:11:01
+ * @LastEditTime: 2022-07-21 14:21:58
  * @FilePath: \Java\2022\7-20-1\Test.html
  * @Description: 
  * 
@@ -17,6 +17,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function add(a, b)
+        {
+            return a + b;
+        }
+
+        let a = 10;
+        let b = 20;
+        let c = add(a, b);
+        
+        console.log(c);
+
+        let student = {
+            name: '张三',
+            age: 100,
+        };
+
+        let s = student;
+
+        console.log(s.age);
+        console.log(s['age']);
+    </script>
 </body>
 </html>
