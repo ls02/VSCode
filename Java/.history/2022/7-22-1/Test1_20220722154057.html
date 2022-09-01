@@ -1,0 +1,60 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-22 14:49:37
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-22 15:39:57
+ * @FilePath: \Java\2022\7-22-1\Test1.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+</head>
+<body>
+    <button id="reset">重新开始一局游戏</button>
+    <button id="guess">猜</button>
+    <br>
+    请输入要猜的数字：<input type="text" id="number">
+    <br>
+    已经猜的次数：<span id="count">0</span>
+
+    <br>
+    结果：<span id="result"></span>
+
+    <script>
+        let resetButton = document.querySelector('#reset');
+        let numberInput = document.querySelector('#number');
+        let guessButton = document.querySelector('#guess');
+        let countSpan = document.querySelector('#count');
+        let resultSpan = document.querySelector('#result');
+
+        // 1.生成一个随机的整数范围1~100
+        let guessNum = Math.floor(Math.random() * 100) + 1;
+        let guessCount = 0;
+        // 2.给 guessButton 设置一个点击事件
+        guessButton.onclick = function() {
+            guessCount += 1;
+            countSpan.innerHTML = guessCount;
+            let userNum = parseInt(numberInput.value);
+
+            if (userNum == guessNum) {
+                resultSpan.innerHTML = '猜对了';
+                resultSpan.style.color = 'green';
+            } else if (userNum > guessNum) {
+                resultSpan.innerHTML = '猜高了';
+                resultSpan.style.color = 'red';
+            } else {
+                resultSpan.innerHTML = '猜低了';
+                resultSpan.style.color = 'blue';
+            }
+        }
+        
+    </script>
+</body>
+</html>

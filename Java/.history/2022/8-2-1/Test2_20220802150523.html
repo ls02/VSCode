@@ -1,0 +1,39 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-08-02 14:58:01
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-08-02 15:05:23
+ * @FilePath: \Java\2022\8-2-1\Test2.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.构造一个 XMLHttpRequest 对象
+        let httpRequest = new XMLHttpRequest();
+        // 4.  注册一个回调函数，用来异步的处理响应数据
+        //      此处注册的 function 不是立即执行的，啥时候响应到了就啥时候执行。
+        httpRequest.onreadystatechange = function() {
+            if (httpRequest.readyState == 4) {
+                // 响应已经到了。
+                // 获取到响应到的状态码和 body
+                console.log(httpRequest.status);
+                console.log(httpRequest.responseText);
+            }
+        }
+        // 2.构造一个 HTTP 请求
+        httpRequest.open('GET', 'http://42.192.83.143:8089/AjaxMockServer/info')
+        // 3. 发生这个 HTTP 请求
+        httpRequest.send();
+    </script>
+</body>
+</html>

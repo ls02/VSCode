@@ -1,0 +1,85 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-22 16:45:39
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-22 17:08:29
+ * @FilePath: \Java\2022\7-22-1\Test2.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白墙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .row {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            width: 80px;
+            font-size: 20px;
+        }
+
+        input {
+            width: 310px;
+            height: 40px;
+        }
+
+        #submit {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>表白墙</h1>
+        <p>输入后点击提交，会将信息显示在墙上</p>
+        <div class="row">
+            <span>谁</span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <span>对谁</span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <span>说什么</span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <input id="sumbit" type="button" value="提交">
+        </div>
+    </div>
+</body>
+</html>

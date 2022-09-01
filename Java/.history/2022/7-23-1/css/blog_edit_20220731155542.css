@@ -1,0 +1,5 @@
+.blog-edit-container {
+    width: 1000px;
+    height: calc(100% - 50px);
+    margin: 0;
+}

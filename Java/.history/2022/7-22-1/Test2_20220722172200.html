@@ -1,0 +1,108 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-22 16:45:39
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-22 17:21:59
+ * @FilePath: \Java\2022\7-22-1\Test2.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白墙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .row {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            width: 80px;
+            font-size: 20px;
+        }
+
+        input {
+            width: 310px;
+            height: 40px;
+        }
+
+        #submit {
+            width: 400px;
+            color: white;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        #submit:active {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>表白墙</h1>
+        <p>输入后点击提交，会将信息显示在墙上</p>
+        <div class="row">
+            <span>谁</span>
+            <input type="text" class="edit">
+        </div>
+        <div class="row">
+            <span>对谁</span>
+            <input type="text" class="edit">
+        </div>
+        <div class="row">
+            <span>说什么</span>
+            <input type="text" class="edit">
+        </div>
+        <div class="row">
+            <input type="button" value="提 交" id="submit">
+        </div>
+        <!-- 每次点击 “提交” 都在下面新增一个.row，里面放置用户输入的话 -->
+        
+    </div>
+
+    <script>
+        let submitButton = document.querySelector('#submit');
+        submitButton.onclick = function() {
+            // 1.先获取到编辑框的内容
+            let edits = document.querySelectorALL('.edit');
+            
+            // 2.根据内容构造一个HTML元素.(.row里面包含用户输入的话)
+            // 3.把这个新的元素添加到DOM树上
+            // 4.清空远来的输入框
+        }
+    </script>
+</body>
+</html>

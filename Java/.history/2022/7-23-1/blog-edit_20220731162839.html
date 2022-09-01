@@ -1,0 +1,69 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-31 15:47:56
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-31 16:28:38
+ * @FilePath: \Java\2022\7-23-1\blog-edit.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客编辑</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blog_edit.css">
+
+    <!-- 引入 editor.md 的依赖 -->
+    <link rel="stylesheet" href="editor.md/css/editormd.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="editor.md/lib/marked.min.js"></script>
+    <script src="editor.md/lib/prettify.min.js"></script>
+    <script src="editor.md/editormd.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <!-- logo -->
+        <img src="./image/log.jpg" alt="加载失败">
+        <!-- 标题 -->
+        <span class="title">我的博客系统</span>
+        <!-- 空白的占位符 -->
+        <span class="spacer"></span>
+        <!-- 右侧的几个连接 -->
+        <a href="blog_list.html">主页</a>
+        <a href="blog_edit.html">写博客</a>
+        <a href="logout">注销</a>
+        </div>
+
+        <!-- 这个就是博客编辑页的版心 -->
+        <div class="blog-edit-container">
+            <!-- 标题编辑区 -->
+            <div class="title">
+                <input type="text" id="title">
+                <button id="submit">发布文章</button>
+            </div>
+
+            <!-- markdown 编辑器标签 -->
+            <div class="editor"></div>
+        </div>
+
+        <script>
+            // 初始化编辑器
+            var editor = editormd("editor", {
+                // 这里的尺寸必须在这里设置，设置样式会被 editormd 自动覆盖掉
+                width: "100%",
+                // 设置编辑器的高度
+                height: "500px",
+                // 编辑器中的初始内容
+                markdown: "# 在这里写下一篇博客",
+                // 指定 editor.md 依赖的插件路劲
+                path: "editor.md/lib/"
+            });
+        </script>
+</body>
+</html>

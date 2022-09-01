@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+          }
+        }
+      </script>
+      
+      
+      <script type="module">
+        import { createApp } from 'vue'
+      
+        createApp({
+          data() {
+            return {
+              message: ''
+            }
+          }
+        }).mount('#app')
+      </script>
+
+      <div id="root">
+        <h1>我的世界</h1>
+      </div>
+</body>
+</html>

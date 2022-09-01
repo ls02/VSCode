@@ -1,0 +1,12 @@
+/* 这个文件专门放博客列表页的样式 */
+
+.blog {
+    width: 100%;
+    padding: 20px;
+}
+
+.blog .title {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}

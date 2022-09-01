@@ -1,0 +1,21 @@
+/* 这个 css 来实现博客详情页的具体样式 */
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.blog-content .date {
+    color: rgb(0, 128, 0);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.blog-content p {
+    text-indent: 2em;
+    padding: 5px 0;
+}

@@ -1,0 +1,101 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-21 15:01:18
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-21 15:57:45
+ * @FilePath: \Java\2022\7-21-1\Test1.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=image.png, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 500px;
+            height: 300px;
+            background-color: gray;
+            margin: 0 auto;
+        }
+
+        .parent .screen{
+            width: 200px;
+            height: 150px;
+            font-size: 50px;
+            line-height: 150px;
+            color:white;
+
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .parent .ctrl{
+            width: 200px;
+            height: 150px;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .parent .ctrl button{
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div> -->
+    <!-- <input type="button" value="我是一个按钮"> -->
+
+    <!-- <div class="parent">hello</div>
+
+    <button>点击按钮，改变文本</button> -->
+
+    <div class="parent">
+        <!-- 通过screen来显示数字 -->
+        <div class="screen">0</div>
+        <div class="ctrl">
+            <button id="plusButton">+</button>
+            <button id="minusButton">-</button>
+        </div>
+    </div>
+
+
+    <script>
+        // let button = document.querySelector('button');
+        // button.onclick = function() {
+        //     let parent = document.querySelector('.parent');
+        //     parent.innerHTML = '<input type="text">';
+        // }
+        // let parent = document.querySelector('.parent');
+        // console.log(parent.innerHTML);
+        // let elem = document.querySelectorAll('div');
+        // console.log(elem);
+        // let button = document.querySelector('input');
+        // button.onclick = function() {
+        //     alert("hello");
+        // }
+        
+    </script>
+</body>
+</html>

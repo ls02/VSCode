@@ -1,0 +1,17 @@
+/* 放置一些公共的样式，比如导航栏 */
+
+/* 清除浏览器默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 给整体页面设置一个高度,让页面和浏览器窗口一样高*/
+html, body {
+    /* 设置页面高度和浏览器高度一样高 */
+    height: 100%;
+
+    /* 设置一个背景图片 */
+    background-image: url(../image/1.jpg);
+}

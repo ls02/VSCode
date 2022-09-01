@@ -1,0 +1,42 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-08-31 13:04:02
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-08-31 13:38:01
+ * @FilePath: \Vue\2022\8-31-1.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="../vueJs/vue.js"></script>
+
+    <div id="root">
+        <h1>你好, {{name}}</h1>
+        <h1>你的年龄：{{age}}</h1>
+    </div>
+
+    <script type="text/javascript">
+        Vue.config.ProductionTip = false;
+
+        // 创建 Vue 实列
+        const x = new Vue({
+            el:'#root',
+            data:{
+                name:'世界'
+            }
+        });
+        
+    </script>
+
+
+</body>
+</html>

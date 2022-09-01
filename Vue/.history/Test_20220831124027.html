@@ -1,0 +1,37 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-08-31 12:40:19
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-08-31 12:40:27
+ * @FilePath: \Vue\Test.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+<div id="app">{{ message }}</div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+
+</body>
+</html>

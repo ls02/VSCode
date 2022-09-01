@@ -1,0 +1,33 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-21 16:43:51
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-21 16:45:00
+ * @FilePath: \Java\2022\7-21-1\test3.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="播放">
+
+    <script>
+        let button = document.querySelector('input');
+        button.onclick = function() {
+            if (button.value == '播放') {
+                button.value = '暂停';
+            } else {
+                button.value = '播放';
+            }
+        }
+    </script>
+</body>
+</html>

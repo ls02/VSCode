@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vueJs/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h1>你好, {{name}}</h1>
+        <h1>你好，{{Demo.name}}</h1>
+        <a :href="url">这是一个{{Demo.name}}链接</a>
+        <br>
+        单项数据绑定：<input type="text" :value="Demo.data">
+        <br>
+        <p>你好</p>
+        <div>是</div>
+    </div>
+
+    <script>
+        let x = new Vue({
+            el:'#root',
+            data:{
+                name:'世界',
+                url:'https://www.baidu.com',
+                Demo:{
+                    name:'百度',
+                    data:'大杀s方'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

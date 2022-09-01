@@ -1,0 +1,36 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-22 14:49:37
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-22 15:31:10
+ * @FilePath: \Java\2022\7-22-1\Test1.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+</head>
+<body>
+    <button id="reset">重新开始一局游戏</button>
+    <br>
+    请输入要猜的数字：<input type="text" id="number">
+    <br>
+    已经猜的次数：<span id="count">0</span>
+    <br>
+    结果：<span id="result"></span>
+
+    <script>
+        let resetButton = document.querySelector('#reset');
+        let numberInput = document.querySelector('#number');
+        let guessButton = document.querySelector('#guess');
+        let countSpan = document.querySelector('#count');
+        let resultSpan = document.querySelector('#result');
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* 这个文件专门来实现登录页面的样式 */
+
+.login-container {
+    width: 100%;
+    height: calc(100% - 50px);
+    /* 为了让内部的登录对话框能够垂直水平居中， 使用 flex 布局来实现*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-dialog {
+    width: 400px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+} 
+
+.login-dialog h3{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.login-container .row {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}

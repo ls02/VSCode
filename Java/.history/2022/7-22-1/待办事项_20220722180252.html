@@ -1,0 +1,121 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-22 17:37:15
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-22 18:01:21
+ * @FilePath: \Java\2022\7-22-1\待办事项.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            /* background-color:  red; */
+            width: 800px;
+            height: 100px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+        }
+
+        /* 任务的输入框 */
+        .nav input {
+            height: 50px;
+            width: 600px;
+        }
+
+        .nav button {
+            height: 50px;
+            width: 200px;
+            background-color: orange;
+        }
+
+        .container {
+            /* background-color: orange; */
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .container h3 {
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .todo {
+            /* background-color: green; */
+            width: 50%;
+            height: 100%;
+        }
+
+        .done {
+            /* background-color: blue; */
+            width: 50%;
+            height: 100%;
+        }
+
+        .row {
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .row input {
+            /* 设置上下外边距为0，设置左右外边距为10px */
+            margin: 0 10px;
+        }
+
+        .row span {
+            width: 300px;
+        }
+
+        .row button {
+            width: 50px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 最上面一行，输入框+新建任务按钮 -->
+    <div class="nav">
+        <input type="text">
+        <button>新建任务</button>
+    </div>
+
+    <!-- 下面就是包含了 左右两个部分的内容区域 -->
+    <div class="container">
+        <!-- 左侧的部分 -->
+        <div class="todo">
+            <h3>未完成</h3>
+            <div class="row">
+                <input type="checkbox">
+                <span>吃饭</span>
+                <button>删除</button>
+            </div>
+        </div>
+        <!-- 右侧的部分 -->
+        <div class="done">
+            <h3>已完成</h3>
+        </div>
+    </div>
+
+</body>
+</html>

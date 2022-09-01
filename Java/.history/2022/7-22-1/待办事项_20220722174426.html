@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项</title>
+    <style>
+        .nav {
+            background-color:  red;
+        }
+
+        .container {
+            background-color: orange;
+        }
+
+        .todo {
+            background-color: green;
+        }
+
+        .done {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 最上面一行，输入框+新建任务按钮 -->
+    <div class="nav">
+        <input type="text">
+        <button>新建任务</button>
+    </div>
+
+    <!-- 下面就是包含了 左右两个部分的内容区域 -->
+    <div class="container">
+        <!-- 左侧的部分 -->
+        <div class="todo"></div>
+        <!-- 右侧的部分 -->
+        <div class="done"></div>
+    </div>
+
+</body>
+</html>

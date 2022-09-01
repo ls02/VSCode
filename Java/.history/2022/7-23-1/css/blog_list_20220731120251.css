@@ -1,0 +1,35 @@
+/* 这个文件专门放博客列表页的样式 */
+
+.blog {
+    width: 100%;
+    padding: 20px;
+}
+
+.blog .title {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.blog .date {
+    color: rgb(0, 128, 0);
+    text-align: center;
+    padding: 5px 0;
+}
+
+.blog .desc {
+    /* 首行缩进两个字体 */
+    text-indent: 2em;
+}
+
+.blog .detail {
+    display: block;
+    width: 200px;
+    height: 50px;
+
+    /* 设置文字居中 */
+    text-align: center;
+    line-height: 50px;
+}

@@ -1,0 +1,91 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-07-23 16:35:54
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-07-31 12:14:20
+ * @FilePath: \Java\2022\7-23-1\blog_list.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>博客列比奥</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blog_list.css">
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <div class="nav">
+      <!-- logo -->
+      <img src="./image/log.jpg" alt="加载失败">
+      <!-- 标题 -->
+      <span class="title">我的博客系统</span>
+      <!-- 空白的占位符 -->
+      <span class="spacer"></span>
+      <!-- 右侧的几个连接 -->
+      <a href="blog_list.html">主页</a>
+      <a href="blog_edit.html">写博客</a>
+      <a href="logout">注销</a>
+    </div>
+
+    <!-- 版心 -->
+    <div class="container">
+        <!-- 左侧个人信息 -->
+        <div class="left">
+
+          <div class="card">
+            <!-- 用户头像 -->
+            <img src="image/用户头像.jpg" alt="加载失败">
+            <!-- 用户名字 -->
+            <h3>张三</h3>
+            <!-- 用户的github地址 -->
+            <a href="">github 地址</a>
+            <div class="counter">
+              <span>文章</span>
+              <span>分类</span>
+            </div>
+            <div class="counter">
+              <span>1</span>
+              <span>2</span>
+              
+            </div>
+          </div>
+
+        </div>
+        <!-- 右侧内容详情 -->
+        <div class="right">
+          <!-- 每个 .blog 就表示一篇博客的区域 -->
+            <div class="blog">
+              <!-- 博客的标题 -->
+              <div class="title">我的第一篇博客</div>
+              <!-- 博客的发布时间 -->
+              <div class="date">2022-7-31</div>
+              <!-- 博客的摘要 -->
+              <div class="desc">
+                从今天起，我要开始认真学习啦,Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quisquam fugiat suscipit quos nisi inventore ullam, modi non fugit in facere asperiores libero impedit voluptatem eaque similique placeat porro sed!
+              </div>
+              <!-- 查看详情博客按钮 -->
+              <a href="#" class="detail">查看全文 &gt;&gt; </a>
+            </div>
+
+            <div class="blog">
+              <!-- 博客的标题 -->
+              <div class="title">我的第二篇博客</div>
+              <!-- 博客的发布时间 -->
+              <div class="date">2022-7-31</div>
+              <!-- 博客的摘要 -->
+              <div class="desc">
+                从今天起，我要开始认真学习啦,Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quisquam fugiat suscipit quos nisi inventore ullam, modi non fugit in facere asperiores libero impedit voluptatem eaque similique placeat porro sed!
+              </div>
+              <!-- 查看详情博客按钮 -->
+              <a href="#" class="detail">查看全文 &gt;&gt; </a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
