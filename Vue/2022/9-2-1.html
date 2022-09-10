@@ -1,0 +1,62 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-09-02 13:55:22
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-09-02 15:28:36
+ * @FilePath: \Vue\2022\9-2-1.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <span>{{message}}</span><br/>
+        <span v-once>{{message}}</span><br/>
+        <button v-on:click="change">修改message</button>
+    </div>
+
+
+    <script>
+    let Root = {
+        data() {
+            return {
+                message: 'hello'
+            }
+        },
+        methods: {
+            change(){
+                this.message = 'change';
+            }
+        }
+    }
+
+    // 创建一个 vue 应用
+    const app = Vue.createApp(Root);
+    // 挂载
+    const vm = app.mount("#app");
+
+    // const app = Vue.createApp({
+    //     data() {
+    //         return {
+    //             name: '经病'
+    //         }
+    //     }
+    // })
+
+
+    //     app.mount("#app");
+
+    //     Vue.createApp(app).mount("#app");
+    </script>
+</body>
+</html>
