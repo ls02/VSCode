@@ -1,0 +1,64 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-09-08 16:42:17
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-09-08 18:19:25
+ * @FilePath: \Vue\2022\9-8-1.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+     <select name="status" id="status" v-model="selected">
+            <option v-for="item in statusArr">{{item}}</option>
+     </select>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+   <script>
+   new Vue({
+       el:'#app',
+       data:{
+              statusArr:[
+                "北京","天津"
+                //   {
+                //       statusId:'0',
+                //       statusVal:'请选择'
+                //   },
+                //   {
+                //       statusId:'1',
+                //       statusVal:'未处理'
+                //   },
+                //   {
+                //       statusId:'2',
+                //       statusVal:'处理中'
+                //   },
+                //   {
+                //       statusId:'3',
+                //       statusVal:'处理完成'
+                //   },
+              ],
+              selected:''
+       },
+    //    created(){
+    //        // 在组件创建之后，把默认选中项的value值赋给绑定的属性
+    //        //如果没有这句代码，select中初始化会是空白的，默认选中就无法实现
+    //      this.selected = this.statusArr[0];
+    //    }
+   })
+    </script>
+
+</body>
+
+
+
+</html>
