@@ -1,0 +1,69 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-09-08 18:10:58
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-09-08 18:11:03
+ * @FilePath: \Vue\2022\9-8-2.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    		<!--省份的下拉框-->
+		<select name="province" id="province" onchange="changeCity()">   <!--使用改变下拉框onchange实现-->
+		    <option value="0">请选择</option>
+		    <option value="1">湖北省</option>
+		    <option value="2">湖南省</option>
+		    <option value="3">广东省</option>
+		</select>
+		<!--城市的下拉框-->
+		<select name="city" id="city">
+		    <option value="0">请选择</option>
+		</select>
+		
+		<script>
+		    // 创建一个二维的数组，用来存储各个省份对应的城市
+		    var cities = new Array();
+		    cities[0] = new Array("武汉市","黄冈市","荆州市","仙桃市","黄石市","宜昌市");
+		    cities[1] = new Array("长沙市","湘潭市","株洲市","衡阳市","岳阳市","郴州市");
+		    cities[2] = new Array("广州市","珠海市","深圳市","东莞市","佛山市","茂名市");
+		
+		    function changeCity() {
+		        // 获取省份的下拉框
+		        var pro = document.getElementById("province");
+		        // 获取城市下拉框
+		        var city = document.getElementById("city");
+		        // 获取你点击的省的value
+		        var val = pro.value;
+		        val = val - 1;
+		        // 清空城市下拉框里面的城市
+		        city.options.length = 1;      //因为每次选新的省份，上次选的省份的城市也会出现，所以新添之前清空即可
+		        // 遍历所有城市
+		        for(var i=0;i<cities.length;i++){
+		            // 匹配省份对应的城市
+		            if(val == i){
+		                // 遍历用户选择的省份的城市        <option value="3">广东省</option>这个里面的文本内容就称为文本节点。
+		                for(var j=0;j<cities[i].length;j++){
+		                    // 创建城市的文本节点
+		                    var text = document.createTextNode(cities[i][j]);
+		                    // 创建元素节点
+		                    var opt = document.createElement("option");
+		                    // 将城市的文本节点添加到option元素节点里面
+		                    opt.appendChild(text) ;      //在option标签里添加一个子节点，子节点里放文本
+		                    // 将添加了文本内容的option标签放在上面城市下拉框里面
+		                    city.appendChild(opt);       //在城市下拉框里添加子节点，里面放option标签
+		                }
+		            }
+		        }
+		    }
+		</script>
+</body>
+</html>
