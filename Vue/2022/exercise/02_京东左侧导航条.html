@@ -1,0 +1,65 @@
+<!--
+ * @Author: ls02 <2877455773@qq.com>
+ * @Date: 2022-09-20 13:16:48
+ * @LastEditors: ls02 <2877455773@qq.com>
+ * @LastEditTime: 2022-09-20 17:12:19
+ * @FilePath: \Vue\2022\exercise\02_京东左侧导航条.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by ${ls02 <2877455773@qq.com>}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            margin: 100px auto;
+        }
+
+        .image {
+            display: inline-block;
+            color: #999;
+            background: url(img/感叹号.png) no-repeat left center;
+            padding-left: 20px;
+            font-size: 12px;
+            background-size: 16px 16px;
+        }
+
+        .right {
+            color: red;
+            background-image: url(img/错误.png);
+        }
+
+        .abc {
+            color: chartreuse;
+            background-image: url(img/正确.png);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" class="ipt">
+        <p class="image">请输入6~12位密码</p>
+    </div>
+
+    <script>
+        let ipt = document.querySelector('.ipt');
+        let image = document.querySelector('.image');
+
+        ipt.onblur = function() {
+            if (this.value.length < 6 || this.value.length > 16) {
+                image.className = "image right";
+                image.innerHTML = "密码格式不符合6~16位";
+            } else {
+                image.className = "image abc";
+                image.innerHTML = "正确";
+            }
+        }
+    </script>
+</body>
+</html>
